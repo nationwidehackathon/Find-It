@@ -21,8 +21,6 @@ export class SearchComponent implements OnInit {
   }
 
   onClickParentBubble(parent:ParentBubble): void {
-  	console.log("Before: " + parent.checked);
   	parent.checked = !parent.checked;
-  	console.log("After: " + parent.checked);
   }
 }
