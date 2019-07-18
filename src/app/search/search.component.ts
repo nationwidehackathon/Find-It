@@ -10,10 +10,19 @@ import { BUBBLES } from '../mock-bubbles'
 })
 export class SearchComponent implements OnInit {
   parentBubbles = BUBBLES;
-  
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  isChecked(parent:ParentBubble): boolean {
+  	return parent.checked;
+  }
+
+  onClickParentBubble(parent:ParentBubble): void {
+  	console.log("Before: " + parent.checked);
+  	parent.checked = !parent.checked;
+  	console.log("After: " + parent.checked);
+  }
 }

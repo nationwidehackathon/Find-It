@@ -1,5 +1,7 @@
 <ul class="bubbly">
-	<li *ngFor="let bubble of bubbles">
-		<h2>{{bubble.name}}</h2>
-	</li>
+	<button mdbBtn type="button" color="primary" rounded="true" mdbWavesEffect *ngFor="let parentBubble of parentBubbles" (click)="onClickParentBubble(parentBubble)">
+		{{parentBubble.name}}
+		<button *ngIf="isChecked(parentBubble)">
+		</button>
+	</button>
 </ul>
