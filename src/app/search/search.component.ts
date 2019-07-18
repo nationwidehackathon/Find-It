@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Bubble } from '../bubble';
 import { ParentBubble } from '../parentBubble';
-import { BUBBLES } from '../mock-bubbles'
+import { BUBBLES } from '../mock-bubbles';
 
 @Component({
   selector: 'app-search',
@@ -16,11 +16,11 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
-  isChecked(parent:ParentBubble): boolean {
-  	return parent.checked;
+  isChecked(parent: ParentBubble): boolean {
+    return parent.checked;
   }
 
-  onClickParentBubble(parent:ParentBubble): void {
-  	parent.checked = !parent.checked;
+  onClickParentBubble(parent: ParentBubble): void {
+    parent.checked = !parent.checked;
   }
 }
