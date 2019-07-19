@@ -13,12 +13,21 @@ export class ResultComponent implements OnInit {
   data=USERS;
   dataFromSearch = this.searchService.getSearchArray();
   filteredUser = this.filterService.getFilteredUser();
+  userGroup = [];
 
-  constructor(private searchService: SearchService, private filterService: FilterService) { }
+  constructor(private searchService: SearchService, 
+  	private filterService: FilterService) { }
 
   ngOnInit() {}
 
-  onChange() {
-  	console.log("it changed!");
+  onChange() : User[] {
+  	this.userGroup = this.filterService.filterTechnicalSkill(this.filterService.getCheckedFilter());
+  	this.filterService.setFilteredUser(this.filterService.getCheckedFilter());
+  	return this.userGroup;
   }
+
+  timedRefresh(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+  }
+  
 }
