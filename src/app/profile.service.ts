@@ -27,4 +27,21 @@ export class ProfileService {
       }
   	}
   }
+
+  getContactInfo() : string[] {
+    for (let user of this.users){
+      if (user.shortName === this.user.shortName) {
+        return this.user.contacts;
+      }
+    }
+  }
+
+  getTechSkills() : string[] {
+    for (let user of this.users){
+      if (user.shortName === this.user.shortName) {
+        return this.user.technicalSkills;
+      }
+    }
+  }
+
 }

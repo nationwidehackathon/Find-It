@@ -12,13 +12,12 @@ export class ProfileComponent implements OnInit {
   users = USERS;
   constructor(private profileService:ProfileService) { }
 
-  contactinfo = this.users[0].contacts;
-  techskills = this.users[0].technicalSkills;
+  ngOnInit() {
+  }
+
   leadershipskills = this.users[0].leadershipSkills;
 
   user = this.profileService.getUserFromShortName();
-
-  ngOnInit() {
-  }
+  contactinfo = this.profileService.getContactInfo();
+  techskills = this.profileService.getTechSkills();
 }
-
