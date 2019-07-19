@@ -12,9 +12,7 @@ import { searchArray } from '../search-array';
 export class SearchComponent implements OnInit {
   parentBubbles = BUBBLES;
   childBubbles = [];
-  public checkModel: any = { left: true, middle: false, right: false };
-  public radioModel: string = 'Left';
-
+  
   constructor() { }
 
   ngOnInit() {
