@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/search', pathMatch: 'full' },
   { path: 'result', component: ResultComponent },
   { path: 'search', component: SearchComponent },
-  { path: 'profile/:id', component: ProfileComponent },
+  { path: 'profile', component: ProfileComponent },
 ];
 @NgModule({
   imports: [ RouterModule.forRoot(routes)],

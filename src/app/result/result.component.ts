@@ -11,7 +11,7 @@ import { FilterService } from '../filter.service';
 })
 export class ResultComponent implements OnInit {
   data=USERS;
-  dataFromSearch = searchService.getSearchArray();
+  dataFromSearch = this.searchService.getSearchArray();
   constructor(private searchService: SearchService, private filterService: FilterService) { }
 
   ngOnInit() {}
@@ -28,7 +28,7 @@ export class ResultComponent implements OnInit {
   // 					console.log(filterService.getFilteredUser());
   // 				}
   // 			}
-  			
+
   // 		}
   // 	}
   // }
