@@ -7,9 +7,10 @@
 
 <div class="card">
   <div class="container">
-    <h4><b>Name</b></h4>
-    <h4 id="shortName">sname42</h4>
-    <h4 id="department"><b>BSA Department</b></h4>
-    <p id="description">I work here</p>
+    <h4 id="name"><b>{{users[0].firstName}} {{users[0].lastName}}</b> ({{users[0].shortName}})</h4>
+    <h4 id="department"><b>{{users[0].department}}</b></h4>
+    <p id="description">{{users[0].description}}</p>
+    <p id="email">{{contactinfo[0].email}}</p>
+    <p id="phone">{{contactinfo[0].phone}}</p>
   </div>
 </div>

@@ -18,7 +18,7 @@ export const USERS: User[] = [
         {phone: "617-564-1258"}
     ],
   },
-  
+
   {
     firstName: "Anu",
     lastName: "Gupta",
@@ -31,14 +31,14 @@ export const USERS: User[] = [
         {skillName: "Informatica", level: 4},
         {skillName: "Ruby", level: 3},
 	{skillName: "SQL", level: 5},
-	{skillName: "JavaScript", level: 4} 
+	{skillName: "JavaScript", level: 4}
     ],
     contacts: [
         {email: "gupta15@nationwide.com"},
         {phone: "614-494-3915"}
     ],
   },
- 
+
    {
     firstName: "Jason",
     lastName: "Johnson",
@@ -57,7 +57,7 @@ export const USERS: User[] = [
         {phone: "614-744-5631"}
     ],
   },
-  
+
   {
     firstName: "Monica",
     lastName: "Roberts",
@@ -75,7 +75,7 @@ export const USERS: User[] = [
         {phone: "617-316-6882"}
     ],
   },
-  
+
    {
     firstName: "Nigel",
     lastName: "Howards",
@@ -96,7 +96,7 @@ export const USERS: User[] = [
         {phone: "614-738-2856"}
     ],
   },
-  
+
   {
     firstName: "Gracie",
     lastName: "Love",
@@ -116,7 +116,7 @@ export const USERS: User[] = [
         {phone: "627-544-3828"}
     ],
   },
-  
+
   {
     firstName: "Chad",
     lastName: "Micheals",
@@ -134,7 +134,7 @@ export const USERS: User[] = [
         {phone: "614-716-3364"}
     ],
   },
-  
+
   {
     firstName: "Fiona",
     lastName: "Parker",
@@ -153,7 +153,7 @@ export const USERS: User[] = [
         {phone: "614-833-5916"}
     ],
   },
-  
+
   {
     firstName: "Xavier",
     lastName: "Snow",
@@ -172,7 +172,7 @@ export const USERS: User[] = [
         {phone: "614-996-5713"}
     ],
   },
-  
+
    {
     firstName: "Rachel",
     lastName: "Walker",
@@ -191,5 +191,5 @@ export const USERS: User[] = [
         {phone: "617-418-6534"}
     ],
   },
-  
+
 ];

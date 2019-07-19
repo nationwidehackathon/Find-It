@@ -12,7 +12,7 @@ import { searchArray } from '../search-array';
 export class SearchComponent implements OnInit {
   parentBubbles = BUBBLES;
   childBubbles = [];
-  
+
   constructor() { }
 
   ngOnInit() {
@@ -21,7 +21,7 @@ export class SearchComponent implements OnInit {
   isChecked(parent: ParentBubble): boolean {
     return parent.checked;
   }
-  
+
   onClickParentBubble(parent:ParentBubble): void {
   	parent.checked = !parent.checked;
   	this.childBubbles = parent.children;
