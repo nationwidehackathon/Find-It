@@ -1,1 +1,14 @@
-<p>search works!</p>
+<ul class="bubbly">
+	<div class="parentBubble" *ngFor="let parentBubble of parentBubbles">
+		<button mdbBtn type="button" color="primary" rounded="true" mdbWavesEffect  (click)="onClickParentBubble(parentBubble)">
+			{{parentBubble.name}}
+		</button>
+		<div *ngIf="parentBubble.checked">
+			<div class="childBubble" *ngFor="let childBubble of childBubbles">
+				<button mdbBtn type="button" color="info" rounded="true" outline="true" mdbWavesEffect>
+					{{childBubble.name}}
+				</button>
+			</div>
+		</div>
+	</div>
+</ul>
