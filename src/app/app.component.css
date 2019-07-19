@@ -1,7 +1,12 @@
 
-.container {
+.topNavBar {
   background-color: #0071bf;
   overflow: hidden;
+  color: black;
+}
+
+ul {
+	display: inline
 }
 
 li {
@@ -18,7 +23,7 @@ li {
   font-family: Helvetica;
 }
 
-.nav-item a.active {
+.nav-item a:active {
   float: left;
   color: #4CAF50;
   text-align: center;
@@ -31,5 +36,10 @@ li {
 .nav-link a:hover {
   background-color: #ddd;
   color: black;
+}
+
+.topnav a:active {
+	background-color: #4CAF50;
+	color: white;
 }
 
