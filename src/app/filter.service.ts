@@ -19,19 +19,14 @@ export class FilterService {
 
   setFilteredUser(newArr: User[]): void {
   	this.filteredUser = newArr;
-	window.onload = timedRefresh(5000);
   }
 
-  getCheckedFilter(): string[] {
-  	return this.checkedFilter;
+  getCheckedFilter(): any[] {
+  	return this.filteredUser;
   }
 
-  setCheckedFilter(newArr: string[]): void {
+  setCheckedFilter(newArr: any[]): void {
   	this.filteredUser = newArr;
-  }
-
-  timedRefresh(timeoutPeriod) {
-	setTimeout("location.reload(true);",timeoutPeriod);
   }
 
   filterTechnicalSkill(arr: string[]) : User[] {
@@ -42,7 +37,7 @@ export class FilterService {
   					this.getFilteredUser().push(this.data[j]);
   				}
   			}
-  			
+
   		}
   	}
   	return this.filteredUser;

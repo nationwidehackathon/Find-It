@@ -35,7 +35,7 @@
       <td>{{user.leadershipSkills}}</td>
       <td>{{user.technicalSkills[0].skillName}}, {{user.technicalSkills[1].skillName}}</td>
       <td>{{user.contacts[0].email}}</td>
-      <td><button type="button" class="btn"><a class="nav-link" routerLink="/profile/{{user.shortName}}">View</a></button></td>
+      <td><button type="button" class="btn"><a class="nav-link" routerLink="/profile/{{user.shortName}}" (click)="getShortName(user)">View</a></button></td>
     </tr>
   </tbody>
 </table>

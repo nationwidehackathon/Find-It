@@ -4,6 +4,7 @@ import { ParentBubble } from '../parentBubble';
 import { BUBBLES } from '../mock-bubbles';
 import { SearchService } from '../search.service';
 import { FilterService } from '../filter.service';
+import { User } from '../user'
 
 @Component({
   selector: 'app-search',

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { USERS } from '../mock-user';
+import { ProfileService } from '../profile.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-profile',
@@ -8,14 +10,15 @@ import { USERS } from '../mock-user';
 })
 export class ProfileComponent implements OnInit {
   users = USERS;
-  constructor() { }
+  constructor(private profileService:ProfileService) { }
 
   contactinfo = this.users[0].contacts;
   techskills = this.users[0].technicalSkills;
   leadershipskills = this.users[0].leadershipSkills;
 
+  user = this.profileService.getUserFromShortName();
+
   ngOnInit() {
   }
-
 }
 

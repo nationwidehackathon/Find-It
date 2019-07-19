@@ -3,6 +3,7 @@ import { USERS } from '../mock-user';
 import { SearchService } from '../search.service';
 import { User } from '../user'
 import { FilterService } from '../filter.service';
+import { ProfileService } from '../profile.service';
 
 @Component({
   selector: 'app-result',
@@ -14,9 +15,11 @@ export class ResultComponent implements OnInit {
   dataFromSearch = this.searchService.getSearchArray();
   filteredUser = this.filterService.getFilteredUser();
   userGroup = [];
+  shortName = "";
 
-  constructor(private searchService: SearchService, 
-  	private filterService: FilterService) { }
+  constructor(private searchService: SearchService,
+    private filterService: FilterService,
+    private profileService: ProfileService) { }
 
   ngOnInit() {}
 
@@ -26,8 +29,10 @@ export class ResultComponent implements OnInit {
   	return this.userGroup;
   }
 
-  timedRefresh(timeoutPeriod) {
-	setTimeout("location.reload(true);",timeoutPeriod);
+  getShortName(user:User) : string {
+    this.shortName = user.shortName;
+    this.profileService.setShortName(this.shortName);
+    return this.shortName;
   }
-  
+
 }
