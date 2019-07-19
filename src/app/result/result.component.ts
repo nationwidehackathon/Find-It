@@ -8,4 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ResultComponent implements OnInit {
   title='Results'
   constructor() { }
+  ngOnInit(){
+
+  }
 }
