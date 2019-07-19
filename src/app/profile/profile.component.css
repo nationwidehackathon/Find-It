@@ -18,6 +18,12 @@ header {
   color: black;
 }
 
+.pic {
+  width: 20%;
+  height: 30%;
+  margin: auto;
+}
+
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -27,6 +33,11 @@ header {
   text-align: center;
   margin: auto;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: lightskyblue;
+}
+
+progress {
+  background: cornflowerblue;
 }
 
 /* On mouse-over, add a deeper shadow */
