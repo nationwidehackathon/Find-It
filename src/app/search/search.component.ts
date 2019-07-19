@@ -3,6 +3,7 @@ import { Bubble } from '../bubble';
 import { ParentBubble } from '../parentBubble';
 import { BUBBLES } from '../mock-bubbles';
 import { SearchService } from '../search.service';
+import { FilterService } from '../filter.service';
 
 @Component({
   selector: 'app-search',
@@ -13,7 +14,7 @@ export class SearchComponent implements OnInit {
   parentBubbles = BUBBLES;
   childBubbles = [];
   
-  constructor(private searchService : SearchService) { }
+  constructor(private searchService : SearchService, private filterService : FilterService) { }
 
   ngOnInit() {
   }
@@ -42,5 +43,9 @@ export class SearchComponent implements OnInit {
   saveToArray(item:Bubble): void {
   	this.searchService.getSearchArray().push(item.name);
   	console.log(this.searchService.getSearchArray());
+  }
+
+  clickFilter() : User[] {
+  	return this.filterService.filterTechnicalSkill();
   }
 }

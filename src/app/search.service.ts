@@ -7,6 +7,7 @@ import { searchArray } from './search-array';
 export class SearchService {
   //tony hire me pls mr.president
   tonySearchArray = searchArray;
+
   constructor() { }
 
   getSearchArray(): string[] {
