@@ -13,7 +13,7 @@ import { FilterService } from '../filter.service';
 export class SearchComponent implements OnInit {
   parentBubbles = BUBBLES;
   childBubbles = [];
-  
+
   constructor(private searchService : SearchService, private filterService : FilterService) { }
 
   ngOnInit() {
@@ -22,7 +22,7 @@ export class SearchComponent implements OnInit {
   isChecked(parent: ParentBubble): boolean {
     return parent.checked;
   }
-  
+
   onClickParentBubble(parent:ParentBubble): void {
   	parent.checked = !parent.checked;
   	this.childBubbles = parent.children;
@@ -36,7 +36,6 @@ export class SearchComponent implements OnInit {
   clear(): void {
   	var emptyArray = [];
 	this.searchService.setSearchArray(emptyArray);
-  	
   }
 
   saveToArray(item:Bubble): void {

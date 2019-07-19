@@ -1,4 +1,15 @@
-<header><h1>PROFILE</h1></header>
+
 <body>
-  <h2>First Last</h2>
+  <header>
+    <h1>PROFILE</h1>
+  </header>
+<div class="card">
+  <div class="container">
+    <h4 id="name"><b>{{users[0].firstName}} {{users[0].lastName}}</b> ({{users[0].shortName}})</h4>
+    <h4 id="department"><b>{{users[0].department}}</b></h4>
+    <p id="description">{{users[0].description}}</p>
+    <p id="email">{{contactinfo[0].email}}</p>
+    <p id="phone">{{contactinfo[0].phone}}</p>
+  </div>
+</div>
 </body>

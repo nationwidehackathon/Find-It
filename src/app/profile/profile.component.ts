@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { USERS } from '../mock-user';
 
 @Component({
   selector: 'app-profile',
@@ -6,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
+  users = USERS;
   constructor() { }
 
-  ngOnInit() { }
+  contactinfo = this.users[0].contacts;
+
+  ngOnInit() {
+  }
 
 }
+

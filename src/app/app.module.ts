@@ -10,7 +10,6 @@ import { ResultComponent } from './result/result.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { SearchComponent } from './search/search.component';
 import { ProfileComponent } from './profile/profile.component';
-import { CardComponent } from './profile/card/card.component';
 import { SkillsComponent } from './profile/skills/skills.component';
 
 @NgModule({
@@ -19,7 +18,6 @@ import { SkillsComponent } from './profile/skills/skills.component';
     ResultComponent,
     ProfileComponent,
     SearchComponent,
-    CardComponent,
     SkillsComponent
   ],
   imports: [
