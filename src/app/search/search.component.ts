@@ -3,7 +3,6 @@ import { Bubble } from '../bubble';
 import { ParentBubble } from '../parentBubble';
 import { BUBBLES } from '../mock-bubbles';
 import { searchArray } from '../search-array';
-
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -18,10 +17,10 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
-  isChecked(parent:ParentBubble): boolean {
-  	return parent.checked;
+  isChecked(parent: ParentBubble): boolean {
+    return parent.checked;
   }
-
+  
   onClickParentBubble(parent:ParentBubble): void {
   	parent.checked = !parent.checked;
   	this.childBubbles = parent.children;
