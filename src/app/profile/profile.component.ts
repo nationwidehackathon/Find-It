@@ -11,6 +11,8 @@ export class ProfileComponent implements OnInit {
   constructor() { }
 
   contactinfo = this.users[0].contacts;
+  techskills = this.users[0].technicalSkills;
+  leadershipskills = this.users[0].leadershipSkills;
 
   ngOnInit() {
   }
