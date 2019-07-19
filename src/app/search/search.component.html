@@ -1,11 +1,15 @@
 <ul class="bubbly">
 	<div class="parentBubble" *ngFor="let parentBubble of parentBubbles">
-		<button mdbBtn type="button" gradient="aqua" rounded="true" mdbWavesEffect  (click)="onClickParentBubble(parentBubble)">
+		<button class="button" (click)="onClickParentBubble(parentBubble)" >
 			{{parentBubble.name}}
 		</button>
 		<div *ngIf="parentBubble.checked">
 			<div class="childBubble" size="sm" *ngFor="let childBubble of parentBubble.children">
-				<button mdbBtn type="button" color="info" rounded="true" outline="true" mdbWavesEffect (click)="saveToArray(childBubble)">
+				<button *ngIf="childBubble.checked" mdbBtn type="button" color="info" rounded="true" outline="true"mdbWavesEffect (click)="onClickChild(childBubble)">
+					{{childBubble.name}}
+				</button>
+				<!-- if child bubble has not been clicked -->
+				<button *ngIf="!childBubble.checked" mdbBtn type="button" color="secondary" rounded="true" outline="true"mdbWavesEffect (click)="onClickChild(childBubble)">
 					{{childBubble.name}}
 				</button>
 			</div>
@@ -13,4 +17,9 @@
 	</div>
 </ul>
 
-<button mdbBtn type="button" color="danger" rounded="true" mdbWavesEffect>SEARCH</button>
+<button mdbBtn type="button" color="danger" rounded="true" mdbWavesEffect (click)="clickFilter()" routerLink="../result">SEARCH</button>
+<button mdbBtn type="button" color="danger" rounded="true" mdbWavesEffect (click)="clear(searchArray)">CLEAR</button>
+<div>
+	<div>{{searchArray}}</div>
+</div>
+
