@@ -7,13 +7,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { SearchComponent } from './search/search.component';
-import { ChildBubbleComponent } from './child-bubble/child-bubble.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    ChildBubbleComponent
   ],
   imports: [
     BrowserModule,
