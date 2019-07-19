@@ -4,11 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProfileComponent } from './profile/profile.component';
+import { CardComponent } from './profile/card/card.component';
+import { SkillsComponent } from './profile/skills/skills.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent
+    ProfileComponent,
+    CardComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
