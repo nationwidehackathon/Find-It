@@ -1,0 +1,10 @@
+.parentBubble {
+	display: inline;
+}
+.childBubble {
+	display: inline;
+}
+
+.active {
+	background-color: yellow;
+}
