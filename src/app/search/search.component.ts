@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Bubble } from '../bubble';
 import { ParentBubble } from '../parentBubble';
 import { BUBBLES } from '../mock-bubbles';
-import { searchArray } from '../search-array';
+import { SearchService } from '../search.service';
 
 @Component({
   selector: 'app-search',
@@ -13,7 +13,7 @@ export class SearchComponent implements OnInit {
   parentBubbles = BUBBLES;
   childBubbles = [];
   
-  constructor() { }
+  constructor(private searchService : SearchService) { }
 
   ngOnInit() {
   }
@@ -27,11 +27,20 @@ export class SearchComponent implements OnInit {
   	this.childBubbles = parent.children;
   }
 
-  clear(searchArray: string[]): void {
-  	searchArray = [];
+  onClickChild(child:Bubble): void {
+  	child.checked = !child.checked;
+    this.saveToArray(child);
+  }
+
+  clear(): void {
+  	var emptyArray = [];
+	this.searchService.setSearchArray(emptyArray);
+  	console.log(this.searchService.getSearchArray());
+  	
   }
 
   saveToArray(item:Bubble): void {
-  	searchArray.push(item.name);
+  	this.searchService.getSearchArray().push(item.name);
+  	console.log(this.searchService.getSearchArray());
   }
 }
