@@ -10,7 +10,7 @@ export const USERS: User[] = [
     isMentor: true,
     leadershipSkills:["Team Leader", "Communicator", "Decision-Making Skills"],
     technicalSkills: [
-        {skillName: "Paxata", level: 3},
+        {skillName: "Java", level: 3},
         {skillName: "Python", level: 5}
     ],
     contacts: [
@@ -28,10 +28,8 @@ export const USERS: User[] = [
     isMentor: false,
     leadershipSkills:["Honesty", "Innovative", "Strong Communication Skills"],
     technicalSkills: [
-        {skillName: "Informatica", level: 4},
         {skillName: "Ruby", level: 3},
-	{skillName: "SQL", level: 5},
-	{skillName: "JavaScript", level: 4}
+		{skillName: "JavaScript", level: 4} 
     ],
     contacts: [
         {email: "gupta15@nationwide.com"},
@@ -49,8 +47,7 @@ export const USERS: User[] = [
     leadershipSkills:["Motivating", "Creative", "Decision-Making Skills"],
     technicalSkills: [
         {skillName: "R", level: 3},
-        {skillName: "Python", level: 5},
-	{skillName: "AWS", level: 3}
+		{skillName: "AWS", level: 3}
     ],
     contacts: [
         {email: "johnj9@nationwide.com"},
@@ -67,7 +64,7 @@ export const USERS: User[] = [
     isMentor: false,
     leadershipSkills:["Positive", "Punctual"],
     technicalSkills: [
-        {skillName: "Puralsight", level: 4},
+        {skillName: "React", level: 4},
         {skillName: "Ruby", level: 5}
     ],
     contacts: [
@@ -85,11 +82,8 @@ export const USERS: User[] = [
     isMentor: true,
     leadershipSkills:["Good Communicator", "Passionate", "Team Leader"],
     technicalSkills: [
-        {skillName: "R", level: 3},
-        {skillName: "JavaScript", level: 4},
 		{skillName: "AWS", level: 5},
-		{skillName: "Symantec", level: 5},
-		{skillName: "Avast", level: 3}
+		{skillName: "Python", level: 5},
     ],
     contacts: [
         {email: "howan43@nationwide.com"},
@@ -106,10 +100,8 @@ export const USERS: User[] = [
     isMentor: true,
     leadershipSkills:["Inpirational", "Good Feedback"],
     technicalSkills: [
-        {skillName: "SQL", level: 5},
+        {skillName: "Database", level: 5},
         {skillName: "Java", level: 4},
-	{skillName: "Informatica", level: 4},
-	{skillName: "Teradata", level: 3}
     ],
     contacts: [
         {email: "loveg13@nationwide.com"},
@@ -146,7 +138,6 @@ export const USERS: User[] = [
     technicalSkills: [
         {skillName: "Ruby", level: 4},
         {skillName: "Java", level: 5},
-	{skillName: "C++", level: 4}
     ],
     contacts: [
         {email: "parkf1@nationwide.com"},
@@ -164,8 +155,7 @@ export const USERS: User[] = [
     leadershipSkills:["Innovative", "Inpirational"],
     technicalSkills: [
 		{skillName: "AWS", level: 2},
-		{skillName: "Symantec", level: 5},
-		{skillName: "SQL", level: 4}
+		{skillName: "Database", level: 4}
     ],
     contacts: [
         {email: "snowx3@nationwide.com"},
@@ -183,7 +173,6 @@ export const USERS: User[] = [
     leadershipSkills:["Team Leader", "Motivational", "Communicator"],
     technicalSkills: [
 		{skillName: "AWS", level: 3},
-		{skillName: "R", level: 5},
 		{skillName: "Python", level: 4}
     ],
     contacts: [

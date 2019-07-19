@@ -9,7 +9,7 @@ import { SearchService } from './search.service';
 export class FilterService {
   data=USERS;
   filteredUser:User[] = [];
-
+  checkedFilter:string[] = [];
 
   constructor(private searchService: SearchService) { }
 
@@ -19,25 +19,36 @@ export class FilterService {
 
   setFilteredUser(newArr: User[]): void {
   	this.filteredUser = newArr;
+	window.onload = timedRefresh(5000);
   }
 
-  filterTechnicalSkill() : User[] {
-  	console.log(this.data[0]);
-  	for(let i in this.searchService.getSearchArray()) {
+  getCheckedFilter(): string[] {
+  	return this.checkedFilter;
+  }
+
+  setCheckedFilter(newArr: string[]): void {
+  	this.filteredUser = newArr;
+  }
+
+  timedRefresh(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+  }
+
+  filterTechnicalSkill(arr: string[]) : User[] {
+  	for(let i in arr) {
   		for(let j in this.data) {
   			for(let k in this.data[j].technicalSkills) {
-  				console.log("dataFromSearch: " + this.searchService.getSearchArray());
-  				console.log("user: " + this.data[j].name);
-  				console.log("skill: " + this.data[j].technicalSkills[k].skillName);
-  				if (this.searchService.getSearchArray()[i] === this.data[j].technicalSkills[k]) {
-  					this.setFilteredUser(this.getFilteredUser().push(data[j]));
-  					console.log("GOT EM!");
+  				if (this.searchService.getSearchArray()[i] === this.data[j].technicalSkills[k].skillName) {
+  					this.getFilteredUser().push(this.data[j]);
   				}
   			}
   			
   		}
   	}
-  	console.log("FINAL: " + this.getFilteredUser());
   	return this.filteredUser;
+  }
+
+  getShortName(user: User) {
+  	return user.shortName;
   }
 }
