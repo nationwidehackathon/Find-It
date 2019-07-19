@@ -1,11 +1,11 @@
 <ul class="bubbly">
 	<div class="parentBubble" *ngFor="let parentBubble of parentBubbles">
-		<button mdbBtn type="button" gradient="aqua" rounded="true" mdbWavesEffect  (click)="onClickParentBubble(parentBubble)">
+		<button mdbBtn type="button" gradient="aqua" rounded="true" mdbWavesEffect aria-pressed="true" class="active" (click)="onClickParentBubble(parentBubble)">
 			{{parentBubble.name}}
 		</button>
 		<div *ngIf="parentBubble.checked">
 			<div class="childBubble" size="sm" *ngFor="let childBubble of parentBubble.children">
-				<button mdbBtn type="button" color="info" rounded="true" outline="true" mdbWavesEffect (click)="saveToArray(childBubble)">
+				<button mdbBtn type="button" color="info" rounded="true" outline="true" aria-pressed="true" mdbWavesEffect (click)="saveToArray(childBubble)">
 					{{childBubble.name}}
 				</button>
 			</div>
@@ -13,4 +13,4 @@
 	</div>
 </ul>
 
-<button mdbBtn type="button" color="danger" rounded="true" mdbWavesEffect>SEARCH</button>
+<button mdbBtn type="button" color="danger" rounded="true" mdbWavesEffect routerLink="../result">SEARCH</button>
