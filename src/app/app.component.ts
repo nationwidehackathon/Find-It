@@ -10,5 +10,6 @@ export class AppComponent implements OnInit {
   event:any
   ngOnInit(){
 
-  }
+export class AppComponent {
+  title = 'Find It';
 }
