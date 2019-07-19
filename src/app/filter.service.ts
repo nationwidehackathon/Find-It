@@ -9,7 +9,7 @@ import { SearchService } from './search.service';
 export class FilterService {
   data=USERS;
   filteredUser:User[] = [];
-
+  checkedFilter:string[] = [];
 
   constructor(private searchService: SearchService) { }
 
@@ -21,8 +21,8 @@ export class FilterService {
   	this.filteredUser = newArr;
   }
 
-  filterTechnicalSkill() : User[] {
-  	for(let i in this.searchService.getSearchArray()) {
+  filterTechnicalSkill(arr: string[]) : User[] {
+  	for(let i in arr) {
   		for(let j in this.data) {
   			for(let k in this.data[j].technicalSkills) {
   				if (this.searchService.getSearchArray()[i] === this.data[j].technicalSkills[k].skillName) {

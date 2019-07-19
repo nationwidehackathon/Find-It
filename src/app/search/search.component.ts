@@ -43,6 +43,6 @@ export class SearchComponent implements OnInit {
   }
 
   clickFilter() : User[] {
-  	return this.filterService.filterTechnicalSkill();
+  	return this.filterService.filterTechnicalSkill(this.searchService.getSearchArray());
   }
 }

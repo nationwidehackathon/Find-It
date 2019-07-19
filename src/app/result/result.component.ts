@@ -17,4 +17,8 @@ export class ResultComponent implements OnInit {
   constructor(private searchService: SearchService, private filterService: FilterService) { }
 
   ngOnInit() {}
+
+  onChange() {
+  	console.log("it changed!");
+  }
 }

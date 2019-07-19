@@ -5,7 +5,7 @@
       <h4>Filter</h4>
 
       <div class="form-check" *ngFor="let item of dataFromSearch">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" (change)="onChange()">
           <label class="form-check-label" for="defaultCheck1">
             {{item}}
           </label>
@@ -35,7 +35,7 @@
       <td>{{user.leadershipSkills}}</td>
       <td>{{user.technicalSkills[0].skillName}}, {{user.technicalSkills[1].skillName}}</td>
       <td>{{user.contacts[0].email}}</td>
-      <td><button type="button" class="btn"><a class="nav-link" routerLink="/profile">View</a></button></td>
+      <td><button type="button" class="btn"><a class="nav-link" routerLink="/profile/{{user.shortName}}">View</a></button></td>
     </tr>
   </tbody>
 </table>
