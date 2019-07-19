@@ -27,11 +27,11 @@ export class FilterService {
   		for(let j in this.data) {
   			for(let k in this.data[j].technicalSkills) {
   				console.log("dataFromSearch: " + this.searchService.getSearchArray());
-  				console.log("user: " + this.data[j].name);
+  				console.log("user: " + this.data[j].shortName);
   				console.log("skill: " + this.data[j].technicalSkills[k].skillName);
-  				if (this.searchService.getSearchArray()[i] === this.data[j].technicalSkills[k]) {
-  					this.setFilteredUser(this.getFilteredUser().push(data[j]));
-  					console.log("GOT EM!");
+  				if (this.searchService.getSearchArray()[i] === this.data[j].technicalSkills[k].skillName) {
+  					this.getFilteredUser().push(this.data[j]);
+  					console.log("GOT EM! " + this.data[j].shortName);
   				}
   			}
   			

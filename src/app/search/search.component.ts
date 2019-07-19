@@ -36,13 +36,11 @@ export class SearchComponent implements OnInit {
   clear(): void {
   	var emptyArray = [];
 	this.searchService.setSearchArray(emptyArray);
-  	console.log(this.searchService.getSearchArray());
   	
   }
 
   saveToArray(item:Bubble): void {
   	this.searchService.getSearchArray().push(item.name);
-  	console.log(this.searchService.getSearchArray());
   }
 
   clickFilter() : User[] {
