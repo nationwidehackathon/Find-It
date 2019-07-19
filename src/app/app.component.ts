@@ -9,7 +9,4 @@ export class AppComponent implements OnInit {
   title = 'find-it'
   event:any
   ngOnInit(){
-
-export class AppComponent {
-  title = 'Find It';
 }
