@@ -1,14 +1,22 @@
 <ul class="bubbly">
 	<div class="parentBubble" *ngFor="let parentBubble of parentBubbles">
-		<button mdbBtn type="button" color="primary" rounded="true" mdbWavesEffect  (click)="onClickParentBubble(parentBubble)">
+		<button class="button" (click)="onClickParentBubble(parentBubble)" >
 			{{parentBubble.name}}
 		</button>
 		<div *ngIf="parentBubble.checked">
-			<div class="childBubble" *ngFor="let childBubble of childBubbles">
-				<button mdbBtn type="button" color="info" rounded="true" outline="true" mdbWavesEffect>
+			<div class="childBubble" size="sm" *ngFor="let childBubble of parentBubble.children">
+				<button *ngIf="childBubble.checked" mdbBtn type="button" color="info" rounded="true" outline="true"mdbWavesEffect (click)="onClickChild(childBubble)">
+					{{childBubble.name}}
+				</button>
+				<!-- if child bubble has not been clicked -->
+				<button *ngIf="!childBubble.checked" mdbBtn type="button" color="secondary" rounded="true" outline="true"mdbWavesEffect (click)="onClickChild(childBubble)">
 					{{childBubble.name}}
 				</button>
 			</div>
 		</div>
 	</div>
 </ul>
+
+<button mdbBtn type="button" color="primary" rounded="true" mdbWavesEffect (click)="clickFilter()" routerLink="../result">SEARCH</button>
+<button mdbBtn type="button" color="primary" rounded="true" mdbWavesEffect (click)="clear(searchArray)">CLEAR</button>
+

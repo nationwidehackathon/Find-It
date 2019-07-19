@@ -1,0 +1,25 @@
+<body>
+  <header>
+    <h1>PROFILE</h1>
+  </header>
+  <div class="pic">
+    <img src="../../assets/Blank-avatar.jpg" alt="big shadow boi">
+  </div>
+  <div class="card">
+    <div class="container">
+      <h4 id="name"><b>{{user.firstName}} {{user.lastName}}</b> ({{user.shortName}})</h4>
+      <h4 id="department"><b>{{user.department}}</b></h4>
+      <p id="description">{{user.description}}</p>
+      <p id="email">{{contactinfo[0].email}}</p>
+      <p id="phone">{{contactinfo[0].phone}}</p>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <h3><b>Technical Skills</b></h3>
+    <h4 id="techskill" *ngFor="let i of techskills">{{i.skillName}} <progress max="5" value={{i.level}}></progress></h4>
+    <br>
+    <h3><b>Leadership Skills</b></h3>
+    <h4 id="leadershipskill" *ngFor="let i of leadershipskills">{{i}}</h4>
+  </div>
+</body>
