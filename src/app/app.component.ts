@@ -10,3 +10,4 @@ export class AppComponent implements OnInit {
   event:any
   ngOnInit(){
 }
+}
