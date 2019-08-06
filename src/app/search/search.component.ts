@@ -4,7 +4,7 @@ import { ParentBubble } from '../parentBubble';
 import { BUBBLES } from '../mock-bubbles';
 import { SearchService } from '../search.service';
 import { FilterService } from '../filter.service';
-import { User } from '../user'
+import { User } from '../user';
 
 @Component({
   selector: 'app-search',
@@ -14,8 +14,10 @@ import { User } from '../user'
 export class SearchComponent implements OnInit {
   parentBubbles = BUBBLES;
   childBubbles = [];
+  searchArray: SearchService;
 
-  constructor(private searchService : SearchService, private filterService : FilterService) { }
+  constructor(private searchService: SearchService,
+              private filterService: FilterService) { }
 
   ngOnInit() {
   }
@@ -24,26 +26,26 @@ export class SearchComponent implements OnInit {
     return parent.checked;
   }
 
-  onClickParentBubble(parent:ParentBubble): void {
-  	parent.checked = !parent.checked;
-  	this.childBubbles = parent.children;
+  onClickParentBubble(parent: ParentBubble): void {
+    parent.checked = !parent.checked;
+    this.childBubbles = parent.children;
   }
 
-  onClickChild(child:Bubble): void {
-  	child.checked = !child.checked;
+  onClickChild(child: Bubble): void {
+    child.checked = !child.checked;
     this.saveToArray(child);
   }
 
   clear(): void {
-  	var emptyArray = [];
-	this.searchService.setSearchArray(emptyArray);
+    const emptyArray = [];
+    this.searchService.setSearchArray(emptyArray);
   }
 
-  saveToArray(item:Bubble): void {
-  	this.searchService.getSearchArray().push(item.name);
+  saveToArray(item: Bubble): void {
+    this.searchService.getSearchArray().push(item.name);
   }
 
-  clickFilter() : User[] {
-  	return this.filterService.filterTechnicalSkill(this.searchService.getSearchArray());
+  clickFilter(): User[] {
+    return this.filterService.filterTechnicalSkill(this.searchService.getSearchArray());
   }
 }

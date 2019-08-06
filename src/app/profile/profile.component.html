@@ -10,16 +10,18 @@
       <h4 id="name"><b>{{user.firstName}} {{user.lastName}}</b> ({{user.shortName}})</h4>
       <h4 id="department"><b>{{user.department}}</b></h4>
       <p id="description">{{user.description}}</p>
-      <p id="email">{{contactinfo[0].email}}</p>
-      <p id="phone">{{contactinfo[0].phone}}</p>
+      <p id="email">{{contactInfo[0].email}}</p>
+      <p id="phone">{{contactInfo[0].phone}}</p>
     </div>
   </div>
   <br>
   <div class="card">
-    <h3><b>Technical Skills</b></h3>
-    <h4 id="techskill" *ngFor="let i of techskills">{{i.skillName}} <progress max="5" value={{i.level}}></progress></h4>
-    <br>
-    <h3><b>Leadership Skills</b></h3>
-    <h4 id="leadershipskill" *ngFor="let i of leadershipskills">{{i}}</h4>
+    <div class="container">
+      <h3><b>Technical Skills</b></h3>
+      <h4 id="techskill" *ngFor="let techSkill of techSkills">{{techSkill.skillName}}<progress max="5" value={{techSkill.level}}></progress></h4>
+      <br>
+      <h3><b>Leadership Skills</b></h3>
+      <h4 id="leadershipskill" *ngFor="let leadershipSkill of leadershipSkills">{{leadershipSkill}}</h4>
+    </div>
   </div>
 </body>

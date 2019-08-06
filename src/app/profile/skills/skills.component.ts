@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { USERS } from "../../mock-user";
+import { USERS } from '../../mock-user';
 
 @Component({
   selector: 'app-skills',

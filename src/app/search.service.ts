@@ -5,13 +5,13 @@ import { searchArray } from './search-array';
   providedIn: 'root'
 })
 export class SearchService {
-  //tony hire me pls mr.president
+  // tony hire me pls mr.president
   tonySearchArray = searchArray;
 
   constructor() { }
 
   getSearchArray(): string[] {
-  	return  this.tonySearchArray;
+    return  this.tonySearchArray;
   }
 
   setSearchArray(arr: string[]): void {

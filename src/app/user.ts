@@ -1,4 +1,4 @@
-import { TechSkill } from './tech-skill'
+import { TechSkill } from './tech-skill';
 export class User {
     firstName: string;
     lastName: string;
@@ -7,9 +7,9 @@ export class User {
     description: string;
     isMentor: boolean;
     leadershipSkills: string[];
-    technicalSkills: TechSkill[];
+    technicalSkills: any [];
     contacts: [
-        {email: string},
-        {phone: string}
+      {email: string},
+      {phone: string}
     ];
 }
